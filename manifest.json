@@ -1,0 +1,27 @@
+{
+    "name": "CryptoStats",
+    "description": "CryptoStatsV1",
+    "version": "0.1.0",
+    "manifest_version": 2,
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": ["content.js"]
+        }
+    ],
+    "background": {
+        "js": ["background.js"]
+    },
+    "options_page": "options.html",
+    "browser_action": {
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "tabs",
+        "<all_urls>",
+        "storage",
+        "activeTab"
+    ]    
+}
